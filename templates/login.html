@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <!-- load in the style sheet. -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+    <form action = "http://127.0.0.1:5000/login" method = "post">
+                <!-- Heading for page. -->
+        <h1>Login Page</h1>
+
+        <!--Login entry fields.-->
+        <label>Username : </label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+        <label>Password : </label>
+        <input type="password" placeholder="Enter Updated Password" name="password" required>
+
+        <!--Login buttons-->
+        <button type="submit">Login</button>
+        <button type="button">Cancel</button>
+    </form>
+
+    <a href="http://127.0.0.1:5000/registration">Sign Up<br></a>
+    <a href="http://127.0.0.1:5000/update">Update Password</a>
+
+    <!--Flash messages for login issues.-->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Page</title>
+        <!-- load in the style sheet. -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+
+    <body>
+    <form action = "http://127.0.0.1:5000/registration" method = "post">
+        <!-- Heading for page. -->
+        <h1>Registration Page</h1>
+
+        <!--Registration entry fields.-->
+        <!-- Username-->
+        <label>Enter your preferred username : </label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <!--Password-->
+        <p>Your password must be at least 12 characters long, have one uppercase character, <br>
+        one lowercase character, one number, and one special character.</p>
+        <label>Enter your Password : </label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <!--Register buttons-->
+        <button type="submit">Register</button>
+        <button type="button">Cancel</button>
+    </form>
+
+    <!--Flash messages for registration issues.-->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+    </body>
+</html>

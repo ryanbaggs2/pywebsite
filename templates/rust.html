@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Rust</title>
+        <!-- load in the style sheet. -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <!--Logout link-->
+        <p align="right"><a href="http://127.0.0.1:5000/logout">logout</a></p>
+
+        <!--Rust page image.-->
+        <img src="/static/images/rust_logo.jpg">
+
+        <!-- Heading for page. -->
+        <h1>Rust</h1>
+
+            <!--Keywords.-->
+            <h3>10 Common Rust Keywords</h3>
+            <!--Ordered list of keywords.-->
+            <ol style="margin-top: 20px;">
+                <li>crate</li>
+                <li>fn</li>
+                <li>for</li>
+                <li>if</li>
+                <li>let</li>
+                <li>loop</li>
+                <li>match</li>
+                <li>mut</li>
+                <li>return</li>
+                <li>while</li>
+            </ol>
+
+            <!--Paragraph explains variables.-->
+            <h3>Variables</h3>
+                <p style="margin-left: 40px;">"let" assigns a value to the variable name specified after the keyword.<br>
+                    <br>
+                Ex: let var = 23;</p>
+
+                        <!--Data structures for Java.-->
+            <h3>Data Structures</h3>
+                <table>
+                    <caption>Rust Data Structures</caption>
+                        <tr>
+                            <th>Sequences</th>
+                            <th>Maps</th>
+                            <th>Sets</th>
+                        </tr>
+                        <tr>
+                            <td>Vec</td>
+                            <td>HashMap</td>
+                            <td>HashSet</td>
+                        </tr>
+                        <tr>
+                            <td>VecDeque</td>
+                            <td>BTreeMap</td>
+                            <td>BTreeSet</td>
+                        </tr>
+                        <tr>
+                            <td>LinkedList</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                </table>
+
+            <!--Some guides and documentation listed as hyperlinks, displaying their specific urls.-->
+            <h3>Guides and Documentation</h3>
+                <h4 style="margin-left: 20px;">Guides</h4>
+                <ul>
+                    <li><a style="margin-left: 20px;" href="https://doc.rust-lang.org/book/">
+                    https://doc.rust-lang.org/book/</a></li>
+                    <li><a style="margin-left: 20px;"
+                           href="https://www.youtube.com/watch?v=MsocPEZBd-M&ab_channel=freeCodeCamp.org">
+                    https://www.youtube.com/watch?v=MsocPEZBd-M&ab_channel=freeCodeCamp.org</a></li>
+                </ul>
+                <h4 style="margin-left: 20px;margin-top: 20px;">Documentation</h4>
+                <ul>
+                    <li><a style="margin-left: 20px;" href="https://doc.rust-lang.org/beta/">
+                        https://doc.rust-lang.org/beta/</a></li>
+                </ul>
+
+            <a href="http://127.0.0.1:5000/">home</a>
+    </body>
+</html>

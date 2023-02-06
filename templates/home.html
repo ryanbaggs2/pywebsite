@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Home</title>
+        <!-- load in the style sheet. -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <!--Logout and Update link-->
+        <p align="right"><a href="http://127.0.0.1:5000/update">Update Password</a><br>
+            <a href="http://127.0.0.1:5000/logout">logout</a></p>
+
+        <!--Home page image.-->
+        <div><img src="/static/images/home_logo.jpg" alt="Home"></div>
+
+        <!--Home page.-->
+        <h1 style="margin-top: 20px;">Home</h1>
+
+            <!--Brief description.-->
+            <h3>Description</h3>
+            <p>This website contains some information on 3 different programming languages.</p>
+
+            <!--Date and time-->
+            <h3>Date and Time</h3>
+            <p>{{date_time}}</p>
+
+            <!--The links to the rest of the site.-->
+            <h3>Languages</h3>
+            <ul>
+                <li><a href="http://127.0.0.1:5000/python">Python</a></li>
+                <li><a href="http://127.0.0.1:5000/java">Java</a></li>
+                <li><a href="http://127.0.0.1:5000/rust">Rust</a></li>
+            </ul>
+    </body>
+</html>
